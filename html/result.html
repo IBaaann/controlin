@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for ('static', path='styles/style.css')}}">
+    <script src="{{url_for ('static', path='scripts/main.js')}}"></script>
+</head>
+<body id="bodygraph">
+    <a href="/index"><button id="glav">Главная</button></a>
+    <h1 id="result">Результаты</h1>
+    <div class="gridos">
+        <div id="border_time">
+            <h1 class="last_time">Лучшее время: {{ best }} с.</h1>
+            <h1 class="last_time">Последний результат: {{ last }} с.</h1>
+        </div>
+        <img id="graph" src="data:image/png;base64, {{ image_base64 }}" alt="График">
+    </div>
+
+</body>
+</html>

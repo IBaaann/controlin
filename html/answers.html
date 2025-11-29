@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты опроса</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for ('static', path='styles/style2.css')}}">
+</head>
+<body>
+    <div class="tables">
+    <h1>Список участников</h1>
+    <table border="2px" bordercolor="black" cellspacing="0">
+        <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+        </tr>
+        {% for item in data_items %}
+            <tr>
+                <td>{{ item.second_name }}</td>
+                <td>{{ item.first_name }}</td>
+                <td>{{ item.father_name }}</td>
+                <td>{{ item.grup }}</td>
+            </tr>
+            {% endfor %}
+
+    </table>
+    </div>
+</body>
+</html>
